@@ -31,6 +31,7 @@ public class wordThing : MonoBehaviour {
 
 		if(init){
 			transform.position+= new Vector3(0,0,-speed);
+			transform.rotation = Quaternion.LookRotation(main.transform.position) * Quaternion.Euler(0, 180, 0);
 		}
 	
 	}
