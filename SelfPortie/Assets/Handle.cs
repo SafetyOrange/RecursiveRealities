@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class Handle : MonoBehaviour {
 	
 	List<string> dap;
-
+	public bool derp=false;
 
 	// Use this for initialization
 	void Start () {
@@ -47,7 +47,8 @@ public class Handle : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if(Input.anyKeyDown){
+		if(Input.anyKeyDown&& !derp){
+			derp=true;
 			audio.Play();
 			Destroy(GameObject.Find("T1"));
 			Destroy(GameObject.Find("T2"));
